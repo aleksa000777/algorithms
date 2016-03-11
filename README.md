@@ -1,1 +1,1 @@
-# codility
+# Algorithms solutions
