@@ -21,3 +21,20 @@ Stack.prototype.pop = function(){
     return deletedData;
   }
 }
+
+Stack.prototype.isEmpty = function(){
+  if(this._size===0){
+    return true;
+  }
+  else return false;
+}
+
+Stack.prototype.isFull = function(){
+  if(this._size==MAXSIZE) return true;
+  else return false;
+}
+
+Stack.prototype.peek = function(){
+  if(this._storage[this._size]) return this._storage[this._size];
+  else return false;
+}
