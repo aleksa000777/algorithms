@@ -17,3 +17,24 @@ function insertion_sort(arr){
 }
 
 insertion_sort([5,2,8,1,3])
+
+////////////////////////////
+function compare(a,b){
+  return a-b;
+}
+
+function insertionSort(arr, cmp){
+  cmp = cmp || compare;
+  var cirrent;
+  var j;
+  for(var  i = 0; i<arr.length; i++){
+    current = arr[i];
+    j = i-1;
+    while( j >= 0 && cmp(arr[j], current) > 0){
+      arr[j+1] = arr[j];
+      j--;
+    }
+    arr[j+1] = current;
+  }
+  return arr;
+}

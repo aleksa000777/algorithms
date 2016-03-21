@@ -15,3 +15,29 @@ function selection_sort(arr){
 }
 
 selection_sort([5,2,7,1,9])
+
+
+function compare(a,b){
+  return a-b;
+}
+
+function selectionSort(arr, cmp){
+  cmp = cmp || compare;
+  var min;
+  var idx;
+  var temp;
+  for(var i = 0; i < arr.length; i++){
+    idx = i;
+    min = arr[i];
+    for(var  j = i+1;j<arr.length;j++){
+      if(cmp(min,arr[j])>0){
+        min = arr[j];
+        idx = j;
+      }
+    }
+    temp = arr[i];
+    arr[i] = min;
+    arr[idx] = temp;
+  }
+  return arr;
+}
